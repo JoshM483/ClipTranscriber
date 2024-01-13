@@ -21,8 +21,6 @@ but CPU may be slower than HuggingFace inference.
 
 # print(torch.cuda.is_available())  # Should return True if the GPU is available and correctly set up
 
-API_URL = "https://api-inference.huggingface.co/models/openai/whisper-medium"
-HEADERS = {"Authorization": "Bearer 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"}
 
 
 def transcribe_with_whisper(model, filename):
