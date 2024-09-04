@@ -1,6 +1,6 @@
 
-# Install CUDA https://developer.nvidia.com/cuda-downloads
-# Install requirements.txt
+# Install requirements.txtpip
+# Install CUDA 
 # You will need to manually install torch to use CUDA. Ref: https://pytorch.org/get-started/locally/
 import os
 import time
@@ -14,7 +14,9 @@ import torch
 
 """
 Simple local transcription for a large number of small audio files
-Requires installing CUDA and a using a compatible GPU
+Requires installing CUDA and a using a compatible GPU 3060+
+https://developer.nvidia.com/cuda-downloads
+You will need to manually install torch to use CUDA. Ref: https://pytorch.org/get-started/locally/
 CPU may be possible my changing device = torch.device('cuda') to 'cpu'
 but CPU may be slower than HuggingFace inference. 
 """
@@ -98,5 +100,7 @@ def main(folder_path, output_path, batch_size, model_size):
 folder_path = 'TestSounds'          # Replace with the path to your folder containing audio files
 output_path = ''                    # Replace with the path where you want to save the csv
 batch_size = 10                     # Adjust this value to control the number of audio files processed in each batch before appending to the CSV
-model_size = 'medium'               # Whisper Model size 
+model_size = 'medium'               # Whisper Model size https://pytorch.org/get-started/locally/
 main(folder_path, output_path, batch_size, model_size)
+
+
